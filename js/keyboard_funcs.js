@@ -87,11 +87,12 @@ function ActivateMusic(eventindex) {
     audio.volume = volume * 0.4
     if (!audio.ended) {
         audio.currentTime = 0
-    } // Solve the problem that  
+    } 
     audio.play()
 }
 
 function DeactivateMusic(eventindex) {
+    // Stop or reset the music
     var audioname = drumconfig.Filename[eventindex]
     var audio = document.getElementById(audioname)
     var is_continuous = drumconfig.Continuity[eventindex]
